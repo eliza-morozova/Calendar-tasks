@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calendar Tasks</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <div class="calendar">
+    <div class="calendar-header">
+      <button onclick="prevMonth()">&lt;</button>
+      <h2 id="month"></h2>
+      <button onclick="nextMonth()">&gt;</button>
+    </div>
+    <div class="weekdays">
+      <div>Mo</div><div>Tu</div><div>We</div><div>Th</div><div>Fr</div><div>Sa</div><div>Su</div>
+    </div>
+    <div class="days" id="days"></div>
+  </div>
+
+  <div class="tasks">
+    <h2>Tasks</h2>
+    <p id="task-date"></p>
+    <div class="input-row">
+      <input type="text" id="task-input" placeholder="Add new task...">
+      <button onclick="addTask()">+</button>
+    </div>
+    <ul class="task-list" id="task-list"></ul>
+  </div>
+</div>
+
+<div id="task-template" style="display: none;">
+  <li>
+    <span class="task-text"></span>
+    <button class="delete-btn">✖</button>
+  </li>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
